@@ -3,7 +3,7 @@
   <nav>
     <div class="container">
       <div class="nav-wrapper">
-        <span>AOS Tracker</span>
+        <a href="/">AOS Tracker</a>
         <ul class="right">
           <li><a href="collapsible.html"><i class="material-icons">refresh</i></a></li>
         </ul>
