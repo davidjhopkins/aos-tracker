@@ -31,7 +31,7 @@
             </div>
             <div class="round-grid-body">
               <div class="input-field col s12">
-                <input :id="'obj'+roundIndex" type="text">
+                <input :id="'obj'+roundIndex" type="text" v-model="players[index].rounds[roundIndex].tactic">
                 <label class="" :for="'obj'+roundIndex">Objective</label>
               </div>
               <div class="round-grid-points-container">
