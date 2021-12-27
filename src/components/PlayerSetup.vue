@@ -56,11 +56,9 @@ export default {
         {
           name: '',
           strat: '',
-          points: 0,
           grandStategy: false,
           rounds: [
             {
-              vps: 0,
               tactic: '',
               objectivePoints: 0,
               monsterKill: false,
@@ -68,7 +66,6 @@ export default {
               battleTacticMonsterBonus: false
             },
             {
-              vps: 0,
               tactic: '',
               objectivePoints: 0,
               monsterKill: false,
@@ -76,7 +73,6 @@ export default {
               battleTacticMonsterBonus: false
             },
             {
-              vps: 0,
               tactic: '',
               objectivePoints: 0,
               monsterKill: false,
@@ -84,7 +80,6 @@ export default {
               battleTacticMonsterBonus: false
             },
             {
-              vps: 0,
               tactic: '',
               objectivePoints: 0,
               monsterKill: false,
@@ -92,15 +87,6 @@ export default {
               battleTacticMonsterBonus: false
             },
             {
-              vps: 0,
-              tactic: '',
-              objectivePoints: 0,
-              monsterKill: false,
-              battleTactic: false,
-              battleTacticMonsterBonus: false
-            },
-            {
-              vps: 0,
               tactic: '',
               objectivePoints: 0,
               monsterKill: false,
@@ -112,11 +98,9 @@ export default {
         {
           name: '',
           strat: '',
-          points: 0,
           grandStategy: false,
           rounds: [
             {
-              vps: 0,
               tactic: '',
               objectivePoints: 0,
               monsterKill: false,
@@ -124,7 +108,6 @@ export default {
               battleTacticMonsterBonus: false
             },
             {
-              vps: 0,
               tactic: '',
               objectivePoints: 0,
               monsterKill: false,
@@ -132,7 +115,6 @@ export default {
               battleTacticMonsterBonus: false
             },
             {
-              vps: 0,
               tactic: '',
               objectivePoints: 0,
               monsterKill: false,
@@ -140,7 +122,6 @@ export default {
               battleTacticMonsterBonus: false
             },
             {
-              vps: 0,
               tactic: '',
               objectivePoints: 0,
               monsterKill: false,
@@ -148,15 +129,6 @@ export default {
               battleTacticMonsterBonus: false
             },
             {
-              vps: 0,
-              tactic: '',
-              objectivePoints: 0,
-              monsterKill: false,
-              battleTactic: false,
-              battleTacticMonsterBonus: false
-            },
-            {
-              vps: 0,
               tactic: '',
               objectivePoints: 0,
               monsterKill: false,

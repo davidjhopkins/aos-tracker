@@ -17,9 +17,12 @@
     <div v-if="players">
       <div class="row">
         <div class="col s12 m6 l6" v-for="(player, index) in players" :key="index">
-          <h3>{{player.name}}</h3>
-          <p>Points: {{player.points}}</p>
-          <p>Grand strategy: {{player.strat}}</p>
+          <h3>{{player.name}} - {{calcFinalScore(index)}} points</h3>
+          <p><strong>Grand strategy:</strong> {{player.strat}} 
+            <span class="switch gs-switch">
+              <label>No<input type="checkbox" v-model="players[index].grandStategy"><span class="lever"></span>Yes (3 VPs)</label>
+            </span>
+          </p>
 
           <div class="round-grid" v-for="(round, roundIndex) in player.rounds" :key="roundIndex">
             <div class="round-grid-title">
@@ -109,6 +112,36 @@ export default {
         battleTacticMonsterBonus = 1
       }
       return objPoints + monsterKill + battleTactic + battleTacticMonsterBonus
+    },
+    calcFinalScore(player) {
+      let total = 0;
+      this.players[player].rounds.forEach(element => {
+        let objPoints = element.objectivePoints;
+        let monsterKill = 0
+        let battleTactic = 0
+        let battleTacticMonsterBonus = 0
+        
+        if(element.monsterKill) {
+          monsterKill = 1
+        }
+        
+        if(element.battleTactic) {
+          battleTactic = 2
+        }
+        
+        if(element.battleTacticMonsterBonus) {
+          battleTacticMonsterBonus = 1
+        }
+        let subtotal = objPoints + monsterKill + battleTactic + battleTacticMonsterBonus
+        total = total + subtotal
+      });
+
+console.log(this.players[player].grandStategy)
+      if(this.players[player].grandStategy) {
+        total = total + 3
+      }
+     
+      return total
     }
   }
 }
@@ -163,5 +196,9 @@ export default {
     display:flex;
     flex-direction:column;
     text-align:center
+  }
+
+  .gs-switch {
+    float:right;
   }
 </style>
