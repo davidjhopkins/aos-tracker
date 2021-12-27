@@ -5,7 +5,7 @@
       <div class="nav-wrapper">
         <a href="/">AOS Tracker</a>
         <ul class="right">
-          <li><a href="collapsible.html"><i class="material-icons">refresh</i></a></li>
+          <li><a href="collapsible.html" @click="refresh()"><i class="material-icons">refresh</i></a></li>
         </ul>
       </div>
     </div>
@@ -82,7 +82,16 @@ export default {
       players: null
     }
   },
-  computed: {
+  mounted() {
+    if(localStorage.players) this.players = JSON.parse(localStorage.players)
+  },
+  watch:{
+    players: {
+      handler: function(newPlayers) {
+        localStorage.players = JSON.stringify(newPlayers)
+      },
+      deep: true
+    }
   },
   methods: {
     onSavePlayers(value) {
@@ -93,6 +102,9 @@ export default {
     },
     decOP(player, round) {
       this.players[player].rounds[round].objectivePoints --
+    },
+    refresh() {
+      localStorage.clear()
     },
     roundScore(player, round) {
       let objPoints = this.players[player].rounds[round].objectivePoints;
@@ -136,7 +148,6 @@ export default {
         total = total + subtotal
       });
 
-console.log(this.players[player].grandStategy)
       if(this.players[player].grandStategy) {
         total = total + 3
       }
