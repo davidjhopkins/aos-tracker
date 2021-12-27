@@ -5,7 +5,7 @@
       <div class="nav-wrapper">
         <a href="/">AOS Tracker</a>
         <ul class="right">
-          <li><a href="/" v-on:click.prevent.stop="refresh()"><i class="material-icons">refresh</i></a></li>
+          <li><a href="/" v-on:click.prevent.stop="refresh()" title="Clear data"><i class="material-icons">refresh</i></a></li>
         </ul>
       </div>
     </div>
