@@ -41,17 +41,17 @@
                   </div>
                   <span>Monster Kill</span>
                   <div class="switch">
-                    <label>No<input type="checkbox" v-model="players[index].rounds[roundIndex].monsterKill"><span class="lever"></span>Yes (1)</label>
+                    <label>No<input type="checkbox" v-model="players[index].rounds[roundIndex].monsterKill"><span class="lever"></span>Yes (1 VPs)</label>
                   </div>
                 </div>
                 <div class="round-grid-points-container-items" >
                   <span>Battle tactic</span>
                   <div class="switch">
-                    <label>No<input type="checkbox" v-model="players[index].rounds[roundIndex].battleTactic"><span class="lever"></span>Yes (2)</label>
+                    <label>No<input type="checkbox" v-model="players[index].rounds[roundIndex].battleTactic"><span class="lever"></span>Yes (2 VPs)</label>
                   </div>
                   <span>Battle tactic monster bonus</span>
                   <div class="switch">
-                    <label>No<input type="checkbox" v-model="players[index].rounds[roundIndex].battleTacticMonsterBonus"><span class="lever"></span>Yes (1)</label>
+                    <label>No<input type="checkbox" v-model="players[index].rounds[roundIndex].battleTacticMonsterBonus"><span class="lever"></span>Yes (1 VPs)</label>
                   </div>
                 </div>
               </div>
