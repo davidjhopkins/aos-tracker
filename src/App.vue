@@ -5,7 +5,7 @@
       <div class="nav-wrapper">
         <a href="/">AOS Tracker</a>
         <ul class="right">
-          <li><span @click="refresh()"><i class="material-icons">refresh</i></span></li>
+          <li><a href="/" v-on:click.prevent.stop="refresh()"><i class="material-icons">refresh</i></a></li>
         </ul>
       </div>
     </div>
@@ -105,6 +105,7 @@ export default {
     },
     refresh() {
       localStorage.clear()
+      this.players = null
     },
     roundScore(player, round) {
       let objPoints = this.players[player].rounds[round].objectivePoints;
