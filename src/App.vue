@@ -5,7 +5,7 @@
       <div class="nav-wrapper">
         <a href="/">AOS Tracker</a>
         <ul class="right">
-          <li><a href="collapsible.html" @click="refresh()"><i class="material-icons">refresh</i></a></li>
+          <li><span @click="refresh()"><i class="material-icons">refresh</i></span></li>
         </ul>
       </div>
     </div>
